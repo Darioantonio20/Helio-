@@ -1,0 +1,131 @@
+.about {
+  min-height: 100vh;
+  padding: var(--spacing-2xl) 0;
+}
+
+.about__container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.about__header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.about__title {
+  font-size: var(--font-size-4xl);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+  font-weight: 700;
+}
+
+.about__subtitle {
+  font-size: var(--font-size-xl);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about__content {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.about__section {
+  margin-bottom: var(--spacing-2xl);
+  padding: var(--spacing-xl);
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+.about__section h2 {
+  font-size: var(--font-size-2xl);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  font-weight: 600;
+}
+
+.about__section p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: var(--font-size-lg);
+  margin: 0;
+}
+
+.about__values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.value-item {
+  padding: var(--spacing-lg);
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.value-item h3 {
+  font-size: var(--font-size-lg);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.value-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  font-size: var(--font-size-base);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .about__container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .about__title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .about__subtitle {
+    font-size: var(--font-size-lg);
+  }
+  
+  .about__section {
+    padding: var(--spacing-lg);
+  }
+  
+  .about__section h2 {
+    font-size: var(--font-size-xl);
+  }
+  
+  .about__section p {
+    font-size: var(--font-size-base);
+  }
+  
+  .about__values {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .value-item {
+    padding: var(--spacing-md);
+  }
+} 

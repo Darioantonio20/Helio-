@@ -1,0 +1,206 @@
+.weather-section {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  height: fit-content;
+}
+
+.weather-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.weather-section__header h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.weather-section__refresh {
+  background: none;
+  border: none;
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s ease;
+}
+
+.weather-section__refresh:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.weather-section__location {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.weather-section__loading {
+  padding: var(--spacing-xl);
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.weather-section__error {
+  padding: var(--spacing-xl);
+  text-align: center;
+}
+
+.weather-section__error p {
+  color: var(--color-error);
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-sm);
+}
+
+.weather-section__error .btn {
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.weather-section__current {
+  padding: var(--spacing-md);
+}
+
+.weather-current {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.weather-current__main {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.weather-current__icon {
+  font-size: 2.5rem;
+}
+
+.weather-current__temp {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.weather-current__info {
+  flex: 1;
+}
+
+.weather-current__location {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.weather-current__condition {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.weather-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm);
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-sm);
+}
+
+.weather-detail span:first-child {
+  color: var(--text-secondary);
+}
+
+.weather-detail span:last-child {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.weather-section__forecast {
+  display: flex;
+  gap: var(--spacing-sm);
+  padding: 0 var(--spacing-md) var(--spacing-md);
+}
+
+.weather-forecast-item {
+  flex: 1;
+  text-align: center;
+  padding: var(--spacing-sm);
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+.forecast-day {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.forecast-icon {
+  display: block;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-xs);
+}
+
+.forecast-temp {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.forecast-temps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.forecast-temp-max {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.forecast-temp-min {
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .weather-current {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .weather-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .weather-section__forecast {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+} 
